@@ -4,6 +4,7 @@
 
     ======================================================================='''
 from views_util import * 
+import models
 
 '''========================================================================
 
@@ -19,6 +20,7 @@ def page_home(request):
     ----------------------
     Renders the base page which provides access to interaction functions
     below'''
+    latest_posts = models.Post.objects.order_by('-post_date')[:5]
     return {
-        'HOST_NAME': settings.HOST_NAME,
+        'latest_posts': latest_posts,
     }

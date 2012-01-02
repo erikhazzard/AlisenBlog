@@ -1,1 +1,13 @@
 {% extends 'blog/base.html' %}
+{% block site_content %}
+{% for post in latest_posts %}
+<div class='home_post_wrapper'>
+    <div class='home_post_title'>
+        <h2>{{post.title}}</h2>
+    </div>
+    <div class='home_post_content'>
+        {{post.content}}
+    </div>
+</div>
+{% endfor %}
+{% endblock site_content %}

@@ -55,7 +55,7 @@ if (SITE_ENVIRONMENT == 'dev' or FORCE_SQLITE is True) and (FORCE_POSTGRES is Fa
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': 'vasirinterface.db',
+            'NAME': 'test.db',
             'USER': '',
             'PASSWORD': '',
             'HOST': '',
